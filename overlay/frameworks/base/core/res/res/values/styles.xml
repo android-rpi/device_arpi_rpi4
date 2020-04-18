@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!-- Standard animations for wallpapers. -->
+    <style name="Animation.Wallpaper">
+        <item name="windowEnterAnimation">@anim/atv_wallpaper_enter</item>
+        <item name="windowExitAnimation">@anim/atv_wallpaper_exit</item>
+    </style>
+
+    <!-- Standard animations for a full-screen window or activity. -->
+    <style name="Animation.Activity">
+        <item name="activityOpenEnterAnimation">@anim/atv_fade_in_top</item>
+        <item name="activityOpenExitAnimation">@anim/atv_fade_in_bottom</item>
+        <item name="activityCloseEnterAnimation">@anim/atv_fade_out_bottom</item>
+        <item name="activityCloseExitAnimation">@anim/atv_fade_out_top</item>
+
+        <item name="taskOpenEnterAnimation">@anim/atv_fade_in_top</item>
+        <item name="taskOpenExitAnimation">@anim/atv_fade_in_bottom</item>
+        <item name="taskCloseEnterAnimation">@anim/atv_fade_out_bottom</item>
+        <item name="taskCloseExitAnimation">@anim/atv_fade_out_top</item>
+
+        <item name="taskToFrontEnterAnimation">@anim/atv_fade_in_top</item>
+        <item name="taskToFrontExitAnimation">@anim/atv_fade_in_bottom</item>
+        <item name="taskToBackEnterAnimation">@anim/atv_fade_out_bottom</item>
+        <item name="taskToBackExitAnimation">@anim/atv_fade_out_top</item>
+
+        <item name="wallpaperOpenEnterAnimation">@anim/atv_fade_out_bottom</item>
+        <item name="wallpaperOpenExitAnimation">@anim/atv_fade_out_top</item>
+        <item name="wallpaperCloseEnterAnimation">@anim/atv_fade_in_top</item>
+        <item name="wallpaperCloseExitAnimation">@anim/atv_fade_in_bottom</item>
+
+        <item name="wallpaperIntraOpenEnterAnimation">@anim/atv_fade_in_top</item>
+        <item name="wallpaperIntraOpenExitAnimation">@anim/atv_fade_in_bottom</item>
+        <item name="wallpaperIntraCloseEnterAnimation">@anim/atv_fade_out_bottom</item>
+        <item name="wallpaperIntraCloseExitAnimation">@anim/atv_fade_out_top</item>
+    </style>
+
+</resources>

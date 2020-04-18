@@ -13,7 +13,7 @@ on init
     write /sys/kernel/mm/ksm/run 1
 
 on fs
-    mount_all /vendor/etc/fstab.rpi3
+    mount_all /vendor/etc/fstab.rpi4
 
 on post-fs-data
     # Bluetooth
