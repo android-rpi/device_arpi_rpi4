@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     libGLES_mesa \
     gralloc.rpi4 \
     memtrack.rpi4 \
+    gatekeeper.rpi4 \
     audio.primary.rpi4 \
     audio.usb.default \
     wificond \
@@ -52,12 +53,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service.rpi4 \
     android.hardware.graphics.mapper@2.0-impl.rpi4 \
-    android.hardware.graphics.composer@2.1-impl.rpi4 \
+    android.hardware.graphics.composer@2.1-service.rpi4 \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio@2.0-service \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.memtrack@1.0-service \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
     android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
     android.hardware.wifi@1.0-service
 
 # system configurations

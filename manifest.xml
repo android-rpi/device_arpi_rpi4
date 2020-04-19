@@ -1,7 +1,7 @@
-<manifest version="1.0" type="device">
+<manifest version="1.0" type="device" target-level="2">
     <hal format="hidl">
         <name>android.hardware.audio</name>
-        <transport arch="32">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>IDevicesFactory</name>
@@ -11,7 +11,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
-        <transport arch="32">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>IEffectsFactory</name>
@@ -29,9 +29,17 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
-        <impl level="generic"></impl>
         <version>2.0</version>
         <interface>
             <name>IAllocator</name>
@@ -41,7 +49,6 @@
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32">passthrough</transport>
-        <impl level="generic"></impl>
         <version>2.0</version>
         <interface>
             <name>IMapper</name>
@@ -50,7 +57,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
-        <transport arch="32">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
             <name>IComposer</name>
@@ -94,6 +101,32 @@
         <version>1.0</version>
         <interface>
             <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::ICryptoFactory/clearkey</fqname>
+        <fqname>@1.1::IDrmFactory/clearkey</fqname>
+        <fqname>@1.1::ICryptoFactory/widevine</fqname>
+        <fqname>@1.1::IDrmFactory/widevine</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
     </hal>
