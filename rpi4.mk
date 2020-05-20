@@ -30,7 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     gralloc.drm.kms=/dev/dri/card0 \
     gralloc.drm.device=/dev/dri/card1 \
     ro.opengles.version=196609 \
-    wifi.interface=wlan0
+    wifi.interface=wlan0 \
+    debug.sf.nobootanimation=1
 
 # application packages
 PRODUCT_PACKAGES += \
