@@ -70,6 +70,13 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service \
     vndservicemanager
 
+# camera
+USE_CAMERA_V4L2_HAL := true
+PRODUCT_PACKAGES += \
+    camera.v4l2 \
+    Camera2
+PRODUCT_PROPERTY_OVERRIDES += ro.hardware.camera=v4l2
+
 # system configurations
 PRODUCT_COPY_FILES := \
     hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
