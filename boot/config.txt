@@ -1,5 +1,6 @@
 kernel=zImage
 device_tree=bcm2711-rpi-4-b.dtb
 dtoverlay=vc4-kms-v3d-pi4
+dtoverlay=dwc2,dr_mode=peripheral
 initramfs ramdisk.img 0x01f00000
 enable_uart=1
