@@ -1,3 +1,4 @@
+import /vendor/etc/init/hw/init.rpi4.usb.rc
 
 on init
     # mount debugfs

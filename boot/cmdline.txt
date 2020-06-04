@@ -1,1 +1,1 @@
-initrd=0x01f00000 console=serial0,115200 no_console_suspend root=/dev/ram0 elevator=deadline rootwait androidboot.hardware=rpi4 androidboot.selinux=permissive
+initrd=0x01f00000 console=serial0,115200 no_console_suspend root=/dev/ram0 elevator=deadline rootwait androidboot.hardware=rpi4 androidboot.selinux=permissive androidboot.serialno=10000000abcd1234

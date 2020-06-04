@@ -8,6 +8,6 @@ on post-fs-data
 
 service adbd /system/bin/adbd --root_seclabel=u:r:su:s0
     class core
-    socket adbd stream 660 system system
+    socket adbd seqpacket 660 system system
     disabled
     seclabel u:r:adbd:s0
