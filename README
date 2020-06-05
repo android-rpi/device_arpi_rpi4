@@ -37,5 +37,4 @@ Read it first : https://github.com/android-rpi/local_manifests
   kernel/arpi/arch/arm/boot/zImage to p1:/
   kernel/arpi/arch/arm/boot/dts/bcm2711-rpi-4-b.dtb to p1:/
   kernel/arpi/arch/arm/boot/dts/overlays/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
-  kernel/arpi/arch/arm/boot/dts/overlays/dwc2.dtbo to p1:/overlays/
   out/target/product/rpi4/ramdisk.img to p1:/
