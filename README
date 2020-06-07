@@ -1,20 +1,23 @@
 Read it first : https://github.com/android-rpi/local_manifests
 
 # Build Kernel
- $ sudo apt install gcc-arm-linux-gnueabihf libssl-dev
- $ cd kernel/arpi
- $ ARCH=arm scripts/kconfig/merge_config.sh arch/arm/configs/bcm2711_defconfig kernel/configs/android-base.config kernel/configs/android-recommended.config
- $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage
- $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
+  $ sudo apt install gcc-arm-linux-gnueabihf libssl-dev
+  $ cd kernel/arpi
+  $ ARCH=arm scripts/kconfig/merge_config.sh arch/arm/configs/bcm2711_defconfig kernel/configs/android-base.config kernel/configs/android-recommended.config
+  $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage
+  $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
 
 # Install python mako module
- $ sudo apt install python-mako
+  $ sudo apt install python-mako
+
+# Patch framework source
+  https://github.com/android-rpi/device_arpi_rpi4/wiki/Android-10-:-patch-framework-source
 
 # Build Android source
  Continue build referring to http://source.android.com/source/building.html
- $ source build/envsetup.sh
- $ lunch rpi4-eng
- $ make ramdisk systemimage vendorimage
+  $ source build/envsetup.sh
+  $ lunch rpi4-eng
+  $ make ramdisk systemimage vendorimage
 
  Use -j[n] option with make, if build host has a good number of CPU cores.
 
