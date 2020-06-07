@@ -63,6 +63,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.hardware.health@2.0-service \
+    android.hardware.health@2.0-impl \
     android.hardware.wifi@1.0-service
 
 # system configurations
