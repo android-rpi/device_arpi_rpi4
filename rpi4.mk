@@ -107,4 +107,5 @@ PRODUCT_COPY_FILES := \
 DEVICE_PACKAGE_OVERLAYS := device/arpi/rpi4/overlay
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_CHARACTERISTICS := tv
-PRODUCT_LOCALES := en_US,ko_KR,ja_JP,zh_CN,hi_IN,en_GB,de_DE,fr_FR,it_IT,ru_RU,es_ES,pt_PT,nl_BE,nl_NL
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
