@@ -65,7 +65,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.health@2.0-service \
     android.hardware.health@2.0-impl \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi@1.0-service \
+    android.hardware.configstore@1.1-service \
+    vndservicemanager
 
 # system configurations
 PRODUCT_COPY_FILES := \
