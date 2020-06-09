@@ -53,6 +53,8 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -I/vendor/etc/wifi/wpa_supplicant_overlay.conf \
     -O/data/vendor/wifi/wpa/sockets -g@android:wpa_wlan0
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
