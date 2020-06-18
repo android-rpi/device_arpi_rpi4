@@ -34,6 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # application packages
 PRODUCT_PACKAGES += \
+    DeskClock \
     RpLauncher
 
 # system packages
