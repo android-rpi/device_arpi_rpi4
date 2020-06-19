@@ -1,1 +1,0 @@
-allow mediaserver dri_device:chr_file rw_file_perms;

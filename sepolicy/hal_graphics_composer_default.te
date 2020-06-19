@@ -1,0 +1,2 @@
+vndbinder_use(hal_graphics_composer_default)
+gpu_access(hal_graphics_composer_default)

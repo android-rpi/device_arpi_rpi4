@@ -1,11 +1,22 @@
-/dev/dri/card[0-9]+		u:object_r:dri_device:s0
-/dev/dri/renderD128		u:object_r:dri_device:s0
+/dev/dri                        u:object_r:gpu_device:s0
+/dev/dri/card0                  u:object_r:gpu_device:s0
+/dev/dri/card1                  u:object_r:gpu_device:s0
+/dev/dri/renderD128             u:object_r:gpu_device:s0
 /dev/rfkill                     u:object_r:rfkill_device:s0
 /dev/ttyAMA0                    u:object_r:hci_attach_dev:s0
 
 /sys/class/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
 
+/sys/devices/platform/gpu/uevent                    u:object_r:sysfs_gpu:s0
+/sys/devices/platform/v3dbus/fec00000.v3d/uevent    u:object_r:sysfs_gpu:s0
+
 /vendor/bin/hw/android\.hardware\.graphics\.allocator@2\.0-service\.rpi4  u:object_r:hal_graphics_allocator_default_exec:s0
 /vendor/bin/hw/android\.hardware\.graphics\.composer@2\.1-service\.rpi4   u:object_r:hal_graphics_composer_default_exec:s0
 /vendor/lib/hw/android\.hardware\.graphics\.mapper@2\.0-impl\.rpi4\.so    u:object_r:same_process_hal_file:s0
+
+/vendor/lib/hw/gralloc\.rpi4\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib/dri/gallium_dri\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib/libgralloc_drm\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib/libdrm\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib/libglapi\.so                 u:object_r:same_process_hal_file:s0
 

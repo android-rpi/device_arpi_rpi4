@@ -1,2 +1,2 @@
-allow system_server dri_device:chr_file rw_file_perms;
+gpu_access(system_server)
 allow system_server self:capability sys_module;

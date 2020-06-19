@@ -1,1 +1,1 @@
-allow surfaceflinger dri_device:chr_file rw_file_perms;
+gpu_access(surfaceflinger)
