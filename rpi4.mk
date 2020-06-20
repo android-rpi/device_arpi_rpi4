@@ -27,8 +27,8 @@ include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.drm.mode.force=1280x720 \
-    gralloc.drm.kms=/dev/dri/card0 \
-    gralloc.drm.device=/dev/dri/card1 \
+    gralloc.drm.device=/dev/dri/card0 \
+    gralloc.drm.kms=/dev/dri/card1 \
     ro.opengles.version=196609 \
     wifi.interface=wlan0
 
