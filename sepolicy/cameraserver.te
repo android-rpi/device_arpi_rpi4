@@ -1,0 +1,4 @@
+# for external camera
+allow cameraserver device:dir r_dir_perms;
+allow cameraserver video_device:dir r_dir_perms;
+allow cameraserver video_device:chr_file rw_file_perms;

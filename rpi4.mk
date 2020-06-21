@@ -71,11 +71,14 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # camera
-USE_CAMERA_V4L2_HAL := true
 PRODUCT_PACKAGES += \
-    camera.v4l2 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-external-service \
     Camera2
-PRODUCT_PROPERTY_OVERRIDES += ro.hardware.camera=v4l2
+
+PRODUCT_COPY_FILES += \
+    device/arpi/rpi4/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+
 
 # system configurations
 PRODUCT_COPY_FILES := \
