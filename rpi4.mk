@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
     Camera2
 
 PRODUCT_COPY_FILES += \
-    device/arpi/rpi4/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+    $(LOCAL_PATH)/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 
 # system configurations
