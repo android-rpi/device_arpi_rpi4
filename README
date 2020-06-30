@@ -21,6 +21,13 @@ Read it first : https://github.com/android-rpi/local_manifests
 
  Use -j[n] option with make, if build host has a good number of CPU cores.
 
+# Create Flashable Image
+  $ cd device/arpi/rpi4
+  $ sudo ./make_image.sh
+
+# Flash Image to SD Card
+  $ Raspberry Pi Imager https://www.raspberrypi.org/downloads
+
 # Prepare sd card
  Partitions of the card should be set-up like followings.
   p1 128MB for boot : Do fdisk, set W95 FAT32(LBA) & Bootable type, mkfs.vfat
