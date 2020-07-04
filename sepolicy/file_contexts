@@ -14,6 +14,8 @@
 /vendor/bin/hw/android\.hardware\.graphics\.composer@2\.1-service\.rpi4   u:object_r:hal_graphics_composer_default_exec:s0
 /vendor/lib/hw/android\.hardware\.graphics\.mapper@2\.0-impl\.rpi4\.so    u:object_r:same_process_hal_file:s0
 
+/vendor/bin/hw/android\.hardware\.camera\.provider@2\.4-external-service\.rpi4    u:object_r:hal_camera_default_exec:s0
+
 /vendor/lib/hw/gralloc\.rpi4\.so         u:object_r:same_process_hal_file:s0
 /vendor/lib/dri/gallium_dri\.so          u:object_r:same_process_hal_file:s0
 /vendor/lib/libgralloc_drm\.so           u:object_r:same_process_hal_file:s0

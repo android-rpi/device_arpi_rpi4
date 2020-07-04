@@ -1,3 +1,5 @@
 /dev/ttyAMA0              0660   bluetooth  bluetooth
 /dev/rfkill               0660   bluetooth  bluetooth
 /dev/ion                  0664   system     system
+/dev/video0               0660   system     camera
+/dev/video1               0660   system     camera
