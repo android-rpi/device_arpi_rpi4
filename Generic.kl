@@ -15,12 +15,12 @@
 #
 # Generic key layout file for full alphabetic US English PC style external keyboards.
 #
-# This file is intentionally very generic and is intended to support a broad rang of keyboards.
+# This file is intentionally very generic and is intended to support a broad range of keyboards.
 # Do not edit the generic key layout to support a specific keyboard; instead, create
 # a new key layout file with the required keyboard configuration.
 #
 
-key 1     ESCAPE
+key 1     BACK
 key 2     1
 key 3     2
 key 4     3
@@ -79,9 +79,9 @@ key 56    ALT_LEFT
 key 57    SPACE
 key 58    CAPS_LOCK
 key 59    HOME
-key 60    BACK
-key 61    MENU
-key 62    INFO
+key 60    F2
+key 61    F3
+key 62    F4
 key 63    F5
 key 64    F6
 key 65    F7
@@ -192,7 +192,7 @@ key 169   CALL
 # key 170 "KEY_ISO"
 key 171   MUSIC
 key 172   HOME
-# key 173 "KEY_REFRESH"
+key 173   REFRESH
 # key 174 "KEY_EXIT"
 # key 175 "KEY_MOVE"
 # key 176 "KEY_EDIT"
@@ -246,8 +246,6 @@ key 217   SEARCH
 key 224   BRIGHTNESS_DOWN
 key 225   BRIGHTNESS_UP
 key 226   HEADSETHOOK
-key 227   STAR
-key 228   POUND
 
 key 256   BUTTON_1
 key 257   BUTTON_2
@@ -406,6 +404,8 @@ key 484   B                 FUNCTION
 # key 503 KEY_BRL_DOT7
 # key 504 KEY_BRL_DOT8
 
+key 522   STAR
+key 523   POUND
 key 580   APP_SWITCH
 key 582   VOICE_ASSIST
 
