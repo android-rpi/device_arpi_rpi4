@@ -1,4 +1,5 @@
-kernel=zImage
+kernel=Image
+arm_64bit=1
 device_tree=bcm2711-rpi-4-b.dtb
 dtparam=audio=on
 dtoverlay=vc4-kms-v3d-pi4

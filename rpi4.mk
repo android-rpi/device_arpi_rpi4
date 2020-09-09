@@ -27,10 +27,12 @@ include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.drm.mode.force=1280x720 \
-    gralloc.drm.device=/dev/dri/card0 \
-    gralloc.drm.kms=/dev/dri/card1 \
+    gralloc.drm.kms=/dev/dri/card0 \
+    gralloc.drm.device=/dev/dri/card1 \
     ro.opengles.version=196609 \
     wifi.interface=wlan0
+
+PRODUCT_SOONG_NAMESPACES += external/mesa3d
 
 # application packages
 PRODUCT_PACKAGES += \
@@ -42,7 +44,6 @@ PRODUCT_PACKAGES += \
     libGLES_mesa \
     gralloc.rpi4 \
     memtrack.rpi4 \
-    gatekeeper.rpi4 \
     audio.primary.rpi4 \
     audio.usb.default \
     wificond \
@@ -60,12 +61,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-service.software \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.health@2.0-service \
-    android.hardware.health@2.0-impl \
+    android.hardware.health@2.1-service \
+    android.hardware.health@2.1-impl \
+    android.hardware.health.storage@1.0-service \
     android.hardware.wifi@1.0-service \
     android.hardware.configstore@1.1-service \
     vndservicemanager
@@ -93,16 +94,16 @@ PRODUCT_COPY_FILES := \
 
 # media configurations
 PRODUCT_COPY_FILES := \
-    device/generic/goldfish/camera/media_profiles.xml:system/etc/media_profiles.xml \
-    device/generic/goldfish/camera/media_codecs.xml:system/etc/media_codecs.xml \
-    frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:system/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    device/generic/goldfish/camera/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    device/generic/goldfish/camera/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    frameworks/av/media/libeffects/data/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/base/data/sounds/effects/ogg/Effect_Tick_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Effect_Tick.ogg \
     $(PRODUCT_COPY_FILES)
 
@@ -111,3 +112,6 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_CHARACTERISTICS := tv
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+TARGET_SUPPORTS_32_BIT_APPS := false
+TARGET_SUPPORTS_64_BIT_APPS := true
