@@ -39,7 +39,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
-        <transport arch="64">passthrough</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>2.0</version>
         <interface>
             <name>IMapper</name>
