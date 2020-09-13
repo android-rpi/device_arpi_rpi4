@@ -5,6 +5,4 @@
 
 #define BTA_DM_COD {0x1A, 0x01, 0x20}
 
-#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
-
 #endif
