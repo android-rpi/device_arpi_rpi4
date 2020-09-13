@@ -8,6 +8,9 @@ Read it first : https://github.com/android-rpi/local_manifests
   $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- DTC_FLAGS="-@" make broadcom/bcm2711-rpi-4-b.dtb
   $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- DTC_FLAGS="-@" make overlays/vc4-kms-v3d-pi4.dtbo
 
+# Patch framework source
+  https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-11-:-framework-patch
+
 # Build Android source
  Continue build referring to http://source.android.com/source/building.html
   $ source build/envsetup.sh
@@ -19,7 +22,7 @@ Read it first : https://github.com/android-rpi/local_manifests
 # Prepare sd card
  Partitions of the card should be set-up like followings.
   p1  128MB for boot : Do fdisk, set W95 FAT32(LBA) & Bootable type, mkfs.vfat
-  p2 1152MB for /system : Do fdisk, new primary partition
+  p2 1024MB for /system : Do fdisk, new primary partition
   p3  128MB for /vendor : Do fdisk, new primary partition
   p4 remainings for /data : Do fdisk, mkfs.ext4
  Set volume label of /data partition as userdata
