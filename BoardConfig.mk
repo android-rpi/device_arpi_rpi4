@@ -60,8 +60,6 @@ BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 
-USE_CAMERA_STUB := true
-
 BOARD_SEPOLICY_DIRS := \
     device/arpi/rpi4/sepolicy
 

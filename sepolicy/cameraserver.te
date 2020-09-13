@@ -1,0 +1,2 @@
+allow cameraserver gpu_device:chr_file rw_file_perms;
+allow cameraserver gpu_device:dir search;

@@ -1,0 +1,3 @@
+vndbinder_use(hal_camera_default);
+allow hal_camera_default gpu_device:chr_file rw_file_perms;
+allow hal_camera_default gpu_device:dir search;
