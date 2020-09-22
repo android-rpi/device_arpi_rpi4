@@ -34,7 +34,7 @@ TARGET_BOARD_PLATFORM := bcm2711
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 805306368 # 768M
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800 # 800 MB
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 134217728 # 128M
 
 TARGET_COPY_OUT_VENDOR := vendor
@@ -69,4 +69,11 @@ BOARD_CUSTOM_BT_CONFIG := device/arpi/rpi4/bluetooth/vnd_rpi4.txt
 BOARD_SEPOLICY_DIRS := \
     device/arpi/rpi4/sepolicy
 
+ifeq ($(TARGET_PRODUCT), rpi4_auto)
+BOARD_SEPOLICY_DIRS += \
+    packages/services/Car/car_product/sepolicy
+
+DEVICE_MANIFEST_FILE += device/arpi/rpi4/auto/manifest.xml
+else
 DEVICE_MANIFEST_FILE := device/arpi/rpi4/manifest.xml
+endif
