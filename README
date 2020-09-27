@@ -4,7 +4,7 @@ Read it first : https://github.com/android-rpi/local_manifests
   $ sudo apt install gcc-aarch64-linux-gnu libssl-dev
   $ cd kernel/arpi
   $ ARCH=arm64 scripts/kconfig/merge_config.sh arch/arm64/configs/bcm2711_defconfig kernel/configs/android-base.config kernel/configs/android-recommended.config
-  $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- make Image
+  $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- make Image.gz
   $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- DTC_FLAGS="-@" make broadcom/bcm2711-rpi-4-b.dtb
   $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- DTC_FLAGS="-@" make overlays/vc4-kms-v3d-pi4.dtbo
 
@@ -35,7 +35,7 @@ Read it first : https://github.com/android-rpi/local_manifests
   
 # Copy kernel & ramdisk to BOOT partition
   device/arpi/rpi4/boot/* to p1:/
-  kernel/arpi/arch/arm64/boot/Image to p1:/
+  kernel/arpi/arch/arm64/boot/Image.gz to p1:/
   kernel/arpi/arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb to p1:/
   kernel/arpi/arch/arm64/boot/dts/overlays/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
   out/target/product/rpi4/ramdisk.img to p1:/
