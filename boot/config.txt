@@ -6,3 +6,4 @@ dtoverlay=vc4-kms-v3d-pi4
 #dtoverlay=dwc2,dr_mode=peripheral
 initramfs ramdisk.img followkernel
 enable_uart=1
+disable_overscan=1
