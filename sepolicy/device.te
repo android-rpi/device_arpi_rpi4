@@ -1,1 +1,2 @@
 type rfkill_device, dev_type, mlstrustedobject;
+type vcio_device, dev_type, mlstrustedobject;

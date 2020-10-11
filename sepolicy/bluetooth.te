@@ -1,1 +1,2 @@
 allow bluetooth rfkill_device:chr_file rw_file_perms;
+allow bluetooth vcio_device:chr_file rw_file_perms;
