@@ -31,6 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     gralloc.drm.kms=/dev/dri/card0 \
     gralloc.drm.device=/dev/dri/card1 \
     ro.opengles.version=196609 \
+    ro.hardware.vulkan=rpi4 \
     wifi.interface=wlan0 \
     ro.rfkilldisabled=1
 
@@ -45,6 +46,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libGLES_mesa \
     gralloc.rpi4 \
+    vulkan.rpi4 \
     memtrack.rpi4 \
     audio.primary.rpi4 \
     audio.usb.default \
@@ -82,6 +84,8 @@ PRODUCT_PACKAGES += \
 # system configurations
 PRODUCT_COPY_FILES := \
     hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
