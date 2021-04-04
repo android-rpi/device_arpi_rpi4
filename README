@@ -1,4 +1,4 @@
-Read it first : https://github.com/android-rpi/local_manifests
+Read it first : https://github.com/android-rpi/local_manifests/tree/arpi-11
 
 # Build Kernel
   $ sudo apt install gcc-aarch64-linux-gnu libssl-dev
