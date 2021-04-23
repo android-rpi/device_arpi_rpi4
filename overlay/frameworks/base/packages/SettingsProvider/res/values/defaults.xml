@@ -34,4 +34,6 @@
 
     <bool name="def_backup_enabled">false</bool>
 
+    <!-- Wifi on by default -->
+    <bool name="def_wifi_on">true</bool>
 </resources>
