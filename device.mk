@@ -14,9 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-include frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk
+# Custom settings
+DEVICE_PACKAGE_OVERLAYS := device/snappautomotive/rpi/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.drm.mode.force=1280x720 \
@@ -25,7 +26,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
     ro.hardware.vulkan=rpi4 \
     wifi.interface=wlan0 \
-    ro.rfkilldisabled=1
+    ro.rfkilldisabled=1 \
+    dalvik.vm.dex2oat64.enabled=true \
+    keyguard.no_require_sim=true
 
 PRODUCT_SOONG_NAMESPACES += external/mesa3d
 
@@ -115,3 +118,5 @@ PRODUCT_COPY_FILES := \
     frameworks/base/data/sounds/effects/ogg/Effect_Tick_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Effect_Tick.ogg \
     frameworks/base/data/sounds/effects/ogg/camera_click_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_click.ogg \
     $(PRODUCT_COPY_FILES)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
