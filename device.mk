@@ -20,7 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 DEVICE_PACKAGE_OVERLAYS := device/snappautomotive/rpi/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.drm.mode.force=1280x800 \
     gralloc.drm.kms=/dev/dri/card0 \
     gralloc.drm.device=/dev/dri/card1 \
     ro.opengles.version=196609 \
