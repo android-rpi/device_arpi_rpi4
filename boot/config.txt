@@ -1,6 +1,7 @@
 kernel=Image.gz
 arm_64bit=1
 dtparam=audio=on
+dtparam=i2s=on
 dtoverlay=vc4-kms-v3d-pi4,noaudio
 #dtoverlay=dwc2,dr_mode=peripheral
 initramfs ramdisk.img followkernel
