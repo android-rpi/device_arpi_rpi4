@@ -39,5 +39,5 @@
 
 # Copy kernel binaries to boot partition
   <kernel directory>/out/arpi-5.10/dist/Image.gz to p1:/
-  <kernel directory>/out/arpi-5.10/dist/bcm2711-rpi-4-b.dtb to p1:/
+  <kernel directory>/out/arpi-5.10/dist/bcm2711-rpi-*.dtb to p1:/
   <kernel directory>/out/arpi-5.10/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
