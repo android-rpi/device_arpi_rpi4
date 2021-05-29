@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <global_keys version="1">
     <key keyCode="KEYCODE_F1" component="com.arpi.rplauncher/.GlobalKeyReceiver" />
-    <key keyCode="KEYCODE_F10" component="com.arpi.rplauncher/.GlobalKeyReceiver" />
+    <key keyCode="KEYCODE_F7" component="com.arpi.rplauncher/.GlobalKeyReceiver" />
 </global_keys>
