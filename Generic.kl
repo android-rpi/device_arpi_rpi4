@@ -85,8 +85,8 @@ key 62    F4
 key 63    F5
 key 64    F6
 key 65    F7
-key 66    F8
-key 67    F9
+key 66    VOLUME_DOWN
+key 67    VOLUME_UP
 key 68    F10
 key 69    NUM_LOCK
 key 70    SCROLL_LOCK
@@ -106,8 +106,8 @@ key 83    NUMPAD_DOT
 # key 84 (undefined)
 key 85    ZENKAKU_HANKAKU
 key 86    BACKSLASH
-key 87    VOLUME_DOWN
-key 88    VOLUME_UP
+key 87    F11
+key 88    F12
 key 89    RO
 # key 90 "KEY_KATAKANA"
 # key 91 "KEY_HIRAGANA"
