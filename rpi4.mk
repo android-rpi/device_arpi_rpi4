@@ -115,6 +115,7 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/firmware/brcm/brcmfmac43456-sdio.txt:root/lib/firmware/brcm/brcmfmac43456-sdio.raspberrypi,400.txt \
     $(LOCAL_PATH)/firmware/brcm/brcmfmac43456-sdio.txt:$(TARGET_COPY_OUT_RAMDISK)/lib/firmware/brcm/brcmfmac43456-sdio.raspberrypi,400.txt \
     $(LOCAL_PATH)/firmware/brcm/BCM4345C0.hcd:root/lib/firmware/brcm/BCM4345C0.hcd \
+    $(LOCAL_PATH)/firmware/brcm/BCM4345C5.hcd:root/lib/firmware/brcm/BCM4345C5.hcd \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
     $(PRODUCT_COPY_FILES)
 
