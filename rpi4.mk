@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf \
+    hostapd \
     libbt-vendor
 
 # hardware/interfaces
