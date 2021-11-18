@@ -3,7 +3,7 @@
 Read it first : https://github.com/snappautomotive/firmware_rpi-local_manifests
 
 # Build Kernel
-  $ sudo apt install gcc-aarch64-linux-gnu libssl-dev
+  $ sudo apt install gcc-aarch64-linux-gnu libssl-dev bc
   $ cd kernel/arpi
   $ ARCH=arm64 scripts/kconfig/merge_config.sh arch/arm64/configs/bcm2711_defconfig kernel/configs/android-base.config kernel/configs/android-recommended.config
   $ ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- make Image.gz
