@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     DeskClock \
     RpLauncher
 
+# overlay packages
+PRODUCT_PACKAGES += \
+    RpFrameworkOverlay
+
 # system packages
 PRODUCT_PACKAGES += \
     libGLES_mesa \
@@ -138,7 +142,6 @@ PRODUCT_COPY_FILES := \
     frameworks/base/data/sounds/effects/ogg/camera_click_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_click.ogg \
     $(PRODUCT_COPY_FILES)
 
-DEVICE_PACKAGE_OVERLAYS := device/arpi/rpi4/overlay
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_CHARACTERISTICS := tv
 
