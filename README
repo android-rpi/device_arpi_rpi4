@@ -1,9 +1,12 @@
+# Setup build envoronment
+  https://source.android.com/setup/build/initializing
+  $ sudo apt install libssl-dev python3-setuptools 
+
 # Download Android source
   https://github.com/android-rpi/local_manifests
 
-  Patch the source
+# Patch the source
   https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-12-:-framework-patch
-
 
 # Build Android
  Refer to http://source.android.com/source/building.html

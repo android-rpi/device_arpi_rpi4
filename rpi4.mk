@@ -29,9 +29,8 @@ include frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.drm.mode.force=1280x720 \
     gralloc.drm.kms=/dev/dri/card0 \
-    gralloc.drm.device=/dev/dri/card1 \
     ro.opengles.version=196609 \
-    ro.hardware.vulkan=rpi4 \
+    ro.hardware.vulkan=broadcom \
     wifi.interface=wlan0 \
     ro.rfkilldisabled=1
 
@@ -48,9 +47,8 @@ PRODUCT_PACKAGES += \
 
 # system packages
 PRODUCT_PACKAGES += \
-    libGLES_mesa \
     gralloc.rpi4 \
-    vulkan.rpi4 \
+    vulkan.broadcom \
     memtrack.rpi4 \
     audio.primary.rpi4 \
     audio.usb.default \
@@ -62,6 +60,14 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     hostapd \
     libbt-vendor
+
+# graphics hal
+PRODUCT_PACKAGES += \
+    libEGL_mesa \
+    libGLESv1_CM_mesa \
+    libGLESv2_mesa \
+    libgallium_dri \
+    libglapi
 
 # hardware/interfaces
 PRODUCT_PACKAGES += \
