@@ -68,6 +68,11 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/arpi/rpi4/bluetooth
 BOARD_CUSTOM_BT_CONFIG := device/arpi/rpi4/bluetooth/vnd_rpi4.txt
 
+# Camera
+BOARD_LIBCAMERA_USES_MESON_BUILD := true
+BOARD_LIBCAMERA_IPAS := raspberrypi
+BOARD_LIBCAMERA_PIPELINES := raspberrypi
+
 BOARD_SEPOLICY_DIRS := \
     device/arpi/rpi4/sepolicy
 

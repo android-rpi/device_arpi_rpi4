@@ -1,9 +1,9 @@
 # Setup build envoronment
   https://source.android.com/setup/build/initializing
-  $ sudo apt install libssl-dev python3-setuptools 
+  $ sudo apt install libssl-dev python3-setuptools python3-jinja2 python3-ply pkg-config
 
 # Download Android source
-  https://github.com/android-rpi/local_manifests
+  https://github.com/android-rpi/local_manifests/tree/arpi-12-camic
 
 # Patch the source
   https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-12-:-framework-patch
@@ -38,9 +38,10 @@
 
 
 # Download & Build kernel source
-  https://github.com/android-rpi/kernel_manifest
+  https://github.com/android-rpi/kernel_manifest/tree/arpi-5.10-camic
 
 # Copy kernel binaries to boot partition
   <kernel directory>/out/arpi-5.10/dist/Image.gz to p1:/
-  <kernel directory>/out/arpi-5.10/dist/bcm2711-rpi-*.dtb to p1:/
+  <kernel directory>/out/arpi-5.10/dist/bcm2711-rpi-4-b.dtb to p1:/
   <kernel directory>/out/arpi-5.10/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
+  <kernel directory>/out/arpi-5.10/dist/ov5647.dtbo to p1:/overlays/

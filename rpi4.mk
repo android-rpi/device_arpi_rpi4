@@ -32,7 +32,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
     ro.hardware.vulkan=broadcom \
     wifi.interface=wlan0 \
-    ro.rfkilldisabled=1
+    ro.rfkilldisabled=1 \
+    ro.hardware.camera=libcamera
 
 # application packages
 PRODUCT_PACKAGES += \
@@ -57,7 +58,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     hostapd \
-    libbt-vendor
+    libbt-vendor \
+    camera.libcamera
 
 # graphics hal
 PRODUCT_PACKAGES += \
@@ -72,7 +74,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service.rpi4 \
     android.hardware.graphics.mapper@2.0-impl.rpi4 \
     android.hardware.graphics.composer@2.1-service.rpi4 \
-    android.hardware.camera.provider@2.5-external-service \
+    android.hardware.camera.provider@2.5-service_64 \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.service \
@@ -102,8 +104,7 @@ PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.camera.external.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.external.xml \
-    $(LOCAL_PATH)/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
     $(LOCAL_PATH)/init.usb.rc:root/init.usb.rc \
     $(LOCAL_PATH)/init.rpi4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi4.rc \
     $(LOCAL_PATH)/init.rpi4.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi4.usb.rc \
@@ -145,6 +146,14 @@ PRODUCT_COPY_FILES := \
     frameworks/base/data/sounds/effects/ogg/Effect_Tick_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Effect_Tick.ogg \
     frameworks/base/data/sounds/effects/ogg/camera_click_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_click.ogg \
     $(PRODUCT_COPY_FILES)
+
+# camera configurations
+PRODUCT_PACKAGES += ipa_rpi
+
+LIBCAMERA_CFGS := ov5647.json
+
+PRODUCT_COPY_FILES += \
+    $(foreach cfg,$(LIBCAMERA_CFGS),external/libcamera/src/ipa/raspberrypi/data/$(cfg):$(TARGET_COPY_OUT_VENDOR)/etc/libcamera/ipa/raspberrypi/$(cfg)$(space))
 
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_CHARACTERISTICS := tv
