@@ -11,7 +11,7 @@ Read it first : https://github.com/android-rpi/local_manifests
   $ sudo apt install python-mako
 
 # Patch framework source
-  https://github.com/android-rpi/device_arpi_rpi4/wiki/Android-10-:-patch-framework-source
+  https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-10-:-framework-patch
 
 # Build Android source
  Continue build referring to http://source.android.com/source/building.html
