@@ -36,6 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # application packages
 PRODUCT_PACKAGES += \
+    TvSettingsTwoPanel \
     DeskClock \
     RpLauncher
 
@@ -50,7 +51,6 @@ PRODUCT_PACKAGES += \
     memtrack.rpi4 \
     audio.primary.rpi4 \
     audio.usb.default \
-    audio.a2dp.default \
     audio.r_submix.default \
     wificond \
     wifilogd \

@@ -6,7 +6,7 @@
   https://github.com/android-rpi/local_manifests
 
 # Patch the source
-  https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-12-:-framework-patch
+  https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-13-:-framework-patch
 
 # Build Android
  Refer to http://source.android.com/source/building.html
