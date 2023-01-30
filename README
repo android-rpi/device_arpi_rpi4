@@ -5,9 +5,6 @@
 # Download Android source
   https://github.com/android-rpi/local_manifests
 
-# Patch the source
-  https://github.com/android-rpi/device_arpi_rpi4/wiki/arpi-13-:-framework-patch
-
 # Build Android
  Refer to http://source.android.com/source/building.html
 
@@ -41,6 +38,6 @@
   https://github.com/android-rpi/kernel_manifest
 
 # Copy kernel binaries to boot partition
-  <kernel directory>/out/arpi-5.10/dist/Image.gz to p1:/
-  <kernel directory>/out/arpi-5.10/dist/bcm2711-rpi-*.dtb to p1:/
-  <kernel directory>/out/arpi-5.10/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
+  <kernel directory>/out/arpi-5.15/dist/Image.gz to p1:/
+  <kernel directory>/out/arpi-5.15/dist/bcm2711-rpi-*.dtb to p1:/
+  <kernel directory>/out/arpi-5.15/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
