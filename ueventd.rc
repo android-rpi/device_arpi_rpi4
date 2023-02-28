@@ -4,3 +4,5 @@
 /dev/ion                  0664   system     system
 /dev/video0               0660   system     camera
 /dev/video1               0660   system     camera
+/dev/video10              0660   media      media
+/dev/dma_heap/linux,cma   0666   system     graphics
