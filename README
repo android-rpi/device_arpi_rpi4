@@ -18,7 +18,7 @@
 # Prepare sd card
  Partitions of the card should be set-up like followings.
   p1  128MB for boot : Do fdisk, set W95 FAT32(LBA) & Bootable type, mkfs.vfat
-  p2 1024MB for /system : Do fdisk, new primary partition
+  p2 1152MB for /system : Do fdisk, new primary partition
   p3  128MB for /vendor : Do fdisk, new primary partition
   p4 remainings for /data : Do fdisk, mkfs.ext4
  Set volume label of /data partition as userdata
@@ -38,6 +38,6 @@
   https://github.com/android-rpi/kernel_manifest
 
 # Copy kernel binaries to boot partition
-  <kernel directory>/out/arpi-5.15/dist/Image.gz to p1:/
-  <kernel directory>/out/arpi-5.15/dist/bcm2711-rpi-*.dtb to p1:/
-  <kernel directory>/out/arpi-5.15/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/
+  <kernel directory>/out/arpi14-6.1/dist/Image.gz to p1:/
+  <kernel directory>/out/arpi14-6.1/dist/bcm2711-rpi-*.dtb to p1:/
+  <kernel directory>/out/arpi14-6.1/dist/vc4-kms-v3d-pi4.dtbo to p1:/overlays/

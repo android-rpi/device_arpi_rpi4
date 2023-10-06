@@ -31,8 +31,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     gralloc.drm.kms=/dev/dri/card0 \
     ro.opengles.version=196609 \
     ro.hardware.vulkan=broadcom \
+    ro.hardware.egl=mesa \
     debug.stagefright.c2-poolmask=0x350000 \
     ro.vendor.v4l2_codec2.decode_concurrent_instances=4 \
+    ro.hdmi.device_type=4 \
     wifi.interface=wlan0 \
     ro.rfkilldisabled=1
 
@@ -74,9 +76,9 @@ PRODUCT_PACKAGES += \
 
 # hardware/interfaces
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-service.rpi4 \
-    android.hardware.graphics.mapper@2.0-impl.rpi4 \
-    android.hardware.graphics.composer@2.1-service.rpi4 \
+    android.hardware.graphics.allocator-service.arpi \
+    android.hardware.graphics.mapper@4.0-impl.arpi \
+    android.hardware.graphics.composer-service.arpi \
     android.hardware.camera.provider@2.5-external-service \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
@@ -93,15 +95,18 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.configstore@1.1-service \
-    android.hardware.tv.cec@1.0-service.mock \
+    android.hardware.tv.hdmi.connection-service \
+    android.hardware.tv.hdmi.cec-service \
+    android.hardware.tv.hdmi.earc-service \
     android.hardware.media.c2@1.0-service-v4l2 \
+    hwservicemanager \
     vndservicemanager
 
 # system configurations
 PRODUCT_COPY_FILES := \
     hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hdmi.cec.xml \
@@ -136,7 +141,7 @@ PRODUCT_COPY_FILES := \
 
 # media configurations
 PRODUCT_COPY_FILES := \
-    device/generic/goldfish/camera/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    device/generic/goldfish/camera/media/profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     frameworks/av/media/libeffects/data/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
