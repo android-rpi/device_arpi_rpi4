@@ -3,7 +3,7 @@
   $ sudo apt install libssl-dev python3-setuptools 
 
 # Download Android source
-  https://github.com/android-rpi/local_manifests
+  https://github.com/android-rpi/local_manifests/tree/arpi14-pi4
 
 # Build Android
  Refer to http://source.android.com/source/building.html
@@ -35,7 +35,7 @@
 
 
 # Download & Build kernel source
-  https://github.com/android-rpi/kernel_manifest
+  https://github.com/android-rpi/kernel_manifest/tree/arpi14-6.1.62
 
 # Copy kernel binaries to boot partition
   <kernel directory>/out/arpi14-6.1/dist/Image.gz to p1:/
